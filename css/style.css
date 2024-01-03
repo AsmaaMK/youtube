@@ -1,0 +1,149 @@
+/* variables */
+:root {
+  --header-hieght: 56px;
+}
+
+/* reset start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* reset end */
+
+/* header start */
+header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 641px) {
+  header {
+    justify-content: space-between;
+  }
+}
+
+#logo {
+  width: 90px;
+}
+
+header .btns-list {
+  display: flex;
+}
+
+header button {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  font-size: 18px;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 641px) {
+  header button.mic-btn {
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-left: 1rem;
+  }
+
+  header button.search-btn {
+    display: none;
+  }
+}
+
+header button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header .search-container {
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  header .search-container {
+    margin-left: auto;
+  }
+}
+
+header form {
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  header form {
+    display: none;
+  }
+}
+
+header form input,
+header form button {
+  padding: 0.2rem 1.5rem;
+  border: 1px solid #ccc;
+}
+
+header form input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  outline: none;
+}
+
+header form input:focus {
+  border-color: rgb(13, 56, 247);
+}
+
+header form button {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* header end */
+
+/* aside start */
+aside {
+  padding: 0.5rem;
+  height: calc(100vh - var(--header-hieght));
+  width: 240px;
+}
+
+aside .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #030303;
+}
+
+aside .nav-link.active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+aside .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+aside .nav-link svg {
+  width: 24px;
+}
+
+/* aside end */
